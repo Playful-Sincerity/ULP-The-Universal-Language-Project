@@ -1,0 +1,402 @@
+/* =============================================================================
+   2D Writer — Universal Language Project
+   Art installation stylesheet — designed for wall projection
+   Visual philosophy: UI disappears; the glyph is the content.
+   Target: 1920×1080 landscape projection
+   ============================================================================= */
+
+/* ---------------------------------------------------------------------------
+   Reset & Box Model
+   --------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------------------------------------------------------
+   Root Variables
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Semantic color palette (12 categories) */
+  --color-existence:   #FFFFFF;
+  --color-emotion:     #FF6B6B;
+  --color-thought:     #B388FF;
+  --color-action:      #FFB347;
+  --color-nature:      #4ECDC4;
+  --color-structure:   #45B7D1;
+  --color-relation:    #FFD93D;
+  --color-time:        #26A69A;
+  --color-space:       #5C6BC0;
+  --color-quantity:    #B0BEC5;
+  --color-quality:     #F48FB1;
+  --color-expression:  #AED581;
+
+  /* Surface tokens */
+  --glass-bg:          rgba(255, 255, 255, 0.03);
+  --glass-border:      rgba(255, 255, 255, 0.06);
+  --glass-blur:        blur(16px) saturate(120%);
+
+  --pill-bg:           rgba(255, 255, 255, 0.05);
+  --pill-border:       rgba(255, 255, 255, 0.12);
+  --pill-color:        rgba(255, 255, 255, 0.55);
+
+  --pill-hover-bg:     rgba(255, 255, 255, 0.10);
+  --pill-hover-border: rgba(255, 255, 255, 0.25);
+  --pill-hover-color:  rgba(255, 255, 255, 0.85);
+
+  /* Warm amber-rose active state — echoes glyph palette */
+  --pill-active-bg:     rgba(255, 255, 255, 0.08);
+  --pill-active-border: rgba(255, 200, 150, 0.40);
+  --pill-active-color:  rgba(255, 220, 180, 0.90);
+
+  --input-bg:           rgba(255, 255, 255, 0.04);
+  --input-border:       rgba(255, 255, 255, 0.10);
+  --input-color:        rgba(255, 255, 255, 0.85);
+  --input-placeholder:  rgba(255, 255, 255, 0.22);
+
+  --input-focus-bg:     rgba(255, 255, 255, 0.07);
+  --input-focus-border: rgba(255, 255, 255, 0.25);
+
+  --btn-bg:             rgba(255, 255, 255, 0.06);
+  --btn-border:         rgba(255, 255, 255, 0.12);
+  --btn-color:          rgba(255, 255, 255, 0.70);
+
+  --btn-hover-bg:       rgba(255, 255, 255, 0.12);
+  --btn-hover-color:    rgba(255, 255, 255, 1.00);
+
+  /* Typography */
+  --font-ui: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+
+  /* Transitions */
+  --t-fast: 0.2s ease;
+  --t-fade: 0.5s ease;
+}
+
+/* ---------------------------------------------------------------------------
+   HTML & Body
+   --------------------------------------------------------------------------- */
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-ui);
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.4;
+
+  /* For projection: use transparent. For dev preview: use #0a0a0f */
+  background: #0a0a0f;
+}
+
+/* ---------------------------------------------------------------------------
+   Canvas Container
+   p5.js injects its <canvas> directly inside this div.
+   Full-screen backdrop; everything else layers above via z-index.
+   --------------------------------------------------------------------------- */
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#canvas-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ---------------------------------------------------------------------------
+   Breakdown
+   Semantic chip row — floats just above the controls bar.
+   Fades in after a glyph starts growing; hidden by default.
+   --------------------------------------------------------------------------- */
+
+#breakdown {
+  position: fixed;
+  bottom: 120px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+  padding: 8px 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-fade);
+}
+
+#breakdown.visible {
+  opacity: 1;
+}
+
+/* Individual word chip */
+.breakdown-word {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  margin: 0 6px 4px;
+  vertical-align: middle;
+  cursor: default;
+}
+
+/* Top row: dot + word */
+.breakdown-word .word-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color var(--t-fast);
+}
+
+.breakdown-word:hover .word-row {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Colored semantic dot */
+.category-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  /* background injected as inline style from main.js */
+}
+
+/* Category name label beneath the word */
+.breakdown-word .label {
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.20);
+  text-transform: uppercase;
+  transition: color var(--t-fast);
+}
+
+.breakdown-word:hover .label {
+  color: rgba(255, 255, 255, 0.40);
+}
+
+/* ---------------------------------------------------------------------------
+   Controls Bar
+   Frosted glass panel pinned to the bottom edge.
+   --------------------------------------------------------------------------- */
+
+#controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 12px 20px 16px;
+
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border);
+}
+
+/* ---------------------------------------------------------------------------
+   Demo Pills Row
+   Single horizontal scrollable row — no wrapping.
+   Hides the scrollbar visually; users can still scroll horizontally.
+   --------------------------------------------------------------------------- */
+
+#demos {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+
+  /* Hide scrollbar across browsers while preserving scroll behavior */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+#demos::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari/Opera */
+}
+
+.demo-pill {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  border-radius: 20px;
+
+  color: var(--pill-color);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+
+  padding: 5px 14px;
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    background    var(--t-fast),
+    border-color  var(--t-fast),
+    color         var(--t-fast),
+    box-shadow    var(--t-fast);
+
+  /* Remove default button appearance */
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.demo-pill:hover {
+  background:    var(--pill-hover-bg);
+  border-color:  var(--pill-hover-border);
+  color:         var(--pill-hover-color);
+}
+
+.demo-pill:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 200, 150, 0.35);
+}
+
+.demo-pill.active {
+  background:    var(--pill-active-bg);
+  border-color:  var(--pill-active-border);
+  color:         var(--pill-active-color);
+  /* Warm glow — echoes the active glyph palette */
+  box-shadow: 0 0 10px rgba(255, 180, 100, 0.10);
+}
+
+/* ---------------------------------------------------------------------------
+   Input Row
+   Text input + generate button, side by side.
+   --------------------------------------------------------------------------- */
+
+#input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#text-input {
+  flex: 1;
+  min-width: 0; /* allows flex shrink below content width */
+
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+
+  color: var(--input-color);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+
+  padding: 10px 16px;
+  outline: none;
+  -webkit-appearance: none;
+
+  transition:
+    background    var(--t-fast),
+    border-color  var(--t-fast),
+    box-shadow    var(--t-fast);
+}
+
+#text-input::placeholder {
+  color: var(--input-placeholder);
+  font-style: italic;
+  font-weight: 300;
+}
+
+#text-input:focus {
+  background:   var(--input-focus-bg);
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Generate Button */
+#generate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: 8px;
+
+  color: var(--btn-color);
+  font-size: 18px;
+  line-height: 1;
+
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  user-select: none;
+
+  transition:
+    background    var(--t-fast),
+    border-color  var(--t-fast),
+    color         var(--t-fast),
+    box-shadow    var(--t-fast),
+    transform     var(--t-fast);
+}
+
+#generate-btn:hover {
+  background:   var(--btn-hover-bg);
+  border-color: rgba(255, 255, 255, 0.20);
+  color:        var(--btn-hover-color);
+  transform: translateX(1px); /* subtle nudge toward the canvas */
+}
+
+#generate-btn:active {
+  transform: translateX(2px) scale(0.96);
+}
+
+#generate-btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(255, 200, 150, 0.35);
+}
+
+/* Loading state — triggered by main.js adding .loading class */
+#generate-btn.loading {
+  animation: btn-pulse 1s ease-in-out infinite;
+}
+
+@keyframes btn-pulse {
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1.0; }
+}
+
+/* ---------------------------------------------------------------------------
+   Utility — Screen Reader Only
+   --------------------------------------------------------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

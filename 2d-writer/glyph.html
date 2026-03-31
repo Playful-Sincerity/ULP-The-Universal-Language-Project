@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glyph — Recursive Symbol Generator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Notation readout — shows the current glyph's notation above the controls */
+    #notation-display {
+      position: fixed;
+      bottom: 110px;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      text-align: center;
+      padding: 6px 20px;
+      font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.25);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    #notation-display.visible {
+      opacity: 1;
+    }
+  </style>
+  <!-- p5.js from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+</head>
+<body>
+  <!-- p5.js canvas -->
+  <div id="canvas-container"></div>
+
+  <!-- Notation readout -->
+  <div id="notation-display"></div>
+
+  <!-- Bottom control bar -->
+  <div id="controls">
+    <div id="demos"></div>
+    <div id="input-row">
+      <input type="text" id="text-input" placeholder="Type glyph notation..." autocomplete="off" spellcheck="false">
+      <button id="generate-btn" aria-label="Generate glyph">→</button>
+    </div>
+  </div>
+
+  <!-- Glyph system scripts (order matters) -->
+  <script src="js/glyph-engine.js"></script>
+  <script src="js/glyph-layout.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/glyph-demos.js"></script>
+  <script src="js/glyph-main.js"></script>
+</body>
+</html>

@@ -107,7 +107,7 @@ void → point → line → plane → volume → time → information → consci
 ```
 
 This is not incidental. ULP's dimensional progression may *be* a cosmological progression — the universe coming together through increasing orders of closure and coupling.
-Formally relating the two would be deeply significant work. See `~/Gravitationalism/` for the GDGM framework.
+Formally relating the two would be deeply significant work. See `~/Playful Sincerity/PS Research/Gravitationalism/` for the GDGM framework.
 
 ## Key Open Problems
 
@@ -140,14 +140,14 @@ Formally relating the two would be deeply significant work. See `~/Gravitational
 ## File Structure
 
 ```
-~/ULP/
+~/Playful Sincerity/PS Research/ULP/
   CLAUDE.md              # This file
   (content TBD)
 
-~/ChatGPT Archive/summaries/
+~/Wisdom Personal/ChatGPT Archive/summaries/
   ulp-language.md        # Primary reference — full synthesis of 33 conversations
 
-~/Gravitationalism/      # GDGM framework — cosmological context for the tier ladder
+~/Playful Sincerity/PS Research/Gravitationalism/      # GDGM framework — cosmological context for the tier ladder
 ```
 
 The ChatGPT archive is the main development record.
@@ -156,7 +156,7 @@ The most important single session is "Self Guided: Branch · Branch · 6 primes 
 
 ## Cross-References
 
-- Primary archive summary: `~/ChatGPT Archive/summaries/ulp-language.md`
-- Gravitationalist philosophy: `~/Gravitationalism/`
+- Primary archive summary: `~/Wisdom Personal/ChatGPT Archive/summaries/ulp-language.md`
+- Gravitationalist philosophy: `~/Playful Sincerity/PS Research/Gravitationalism/`
 - Memory file: `~/.claude/projects/-Users-wisdomhappy/memory/project_ulp.md`
 - Related math system: IVNA (documented in ChatGPT archive)

@@ -1,2 +1,6 @@
 .DS_Store
 *.swp
+
+# Lean 4 build artifacts
+.lake/
+__pycache__/
