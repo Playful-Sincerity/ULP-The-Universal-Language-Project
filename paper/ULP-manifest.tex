@@ -1,0 +1,161 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue!60!black,
+  citecolor=blue!60!black,
+}
+
+\title{\textbf{The Universal Language Project (ULP)}\\[0.5em]
+       \large\normalfont A Search for the Minimal Logical Substrate of Meaning}
+\author{Wisdom Happy\\\small Playful Sincerity Research}
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+\vspace{-0.5em}
+{\Huge \texttt{0} \quad \texttt{1}}
+
+\vspace{0.4em}
+{\small absence \quad $\cdot$ \quad presence}
+\end{center}
+
+\vspace{1.5em}
+
+\begin{abstract}
+\noindent ULP proposes that meaning has a minimal substrate that is not culturally chosen but geometrically necessary. The working hypothesis is that the fundamental semantic primitives can be represented as binary run lengths of ones and zeros, where each run-length encodes a \emph{dimension} of either existence (runs of \texttt{1}) or separation (runs of \texttt{0}), with the ladder extending from the spatial dimensions upward into temporality, information, and self-simulation. The current proposal builds a 13-tier dimensional ladder on this substrate, each tier derived from the geometric fact that $n$ points are required to define an $(n-1)$-dimensional simplex. This document is the project manifest. It states the non-negotiable requirements any candidate substrate must satisfy, describes the current proposal, names its current state honestly, and points to the larger body of work the proposal sits on top of. The system is held provisionally --- but the provisionality is a research stance, not a lack of commitment. Years of iteration have led here.
+\end{abstract}
+
+\section{What the System Must Satisfy}
+
+Any candidate for a fundamental semantic substrate must meet a small set of non-negotiable requirements. These are \textbf{constitutional} --- they predate any particular notation or ladder, and they are the criteria by which every proposal is evaluated.
+
+\begin{enumerate}[leftmargin=*, itemsep=0.4em]
+    \item \textbf{Minimal alphabet.} The system uses the smallest possible symbol set --- one that admits no arbitrary cultural choice. At the limit: two symbols.
+    \item \textbf{Type from structure alone.} The type or category of any primitive comes from its own structural form, not from external labels, lookup tables, or metadata.
+    \item \textbf{Compositionality.} Complex meanings are built from simpler ones via declared rules. No meaning is atomic above the primitive level.
+    \item \textbf{Self-delimiting, deterministic parsing.} Any valid string has exactly one parse tree, recoverable from the string itself --- no external punctuation or framing.
+\end{enumerate}
+
+These four requirements do not determine a unique solution --- they are compatible with many possible systems --- but they rule out most of what has been tried. What follows is \emph{one candidate} for satisfying all four.
+
+\section{The Current Proposal}
+
+\subsection{Two Base Symbols}
+
+\begin{itemize}[leftmargin=*, itemsep=0.3em]
+    \item \texttt{0} --- absence, void, the cut that makes distinction possible.
+    \item \texttt{1} --- presence, manifestation, the thing that can be cut.
+\end{itemize}
+
+These are not arbitrary choices. They are the minimum required to generate any distinction at all.
+
+\subsection{Run-Length Encoding as Surface Form}
+
+The alphabet is binary. The grammar is \emph{runs of the same symbol}. A run of $n$ ones is written \texttt{n.} and denotes an $n$-th order closure. A run of $n$ zeros is written \texttt{no} and denotes an $n$-th order cut. The dot or circle suffix always follows the number; this is the one syntactic rule outside the runs themselves.
+
+Meaning derives from run-length alone. There are no other symbols --- no parentheses, no commas, no variable names, no external metadata. The commitment is to the minimum.
+
+\subsection{The Dimensional Ladder (Current Version)}
+
+The structural rule: $n$ points are geometrically required to define an $(n-1)$-dimensional simplex. So a run of length $n$ corresponds to $(n-1)$-dimensional structure. Two points define a line; three points define a triangle; four points define a tetrahedron; and so on.
+
+The current version of the ladder groups into four bands across thirteen tiers:
+
+\begin{center}
+\begin{tabular}{@{}lll@{}}
+\textbf{Band} & \textbf{Tiers} & \textbf{Content} \\
+\hline
+Space            & 1--4   & point, line, plane, volume \\
+Time / Dynamics  & 5--7   & event, co-change, system \\
+Information      & 8--10  & signal, logic, simulation \\
+Self-Awareness   & 11--13 & self, social, unity \\
+\end{tabular}
+\end{center}
+
+Tiers 1--8 carry strong geometric and logical necessity arguments. Tiers 9--13 are held provisionally --- they depend on philosophical commitments that could reasonably be structured otherwise. Earlier iterations of the ladder had 7, 9, and 10 tiers; the 13-tier structure is the most recent, and future revisions remain live possibilities.
+
+\subsection{Alien Convergence as the Self-Test}
+
+If the tier ladder is generated by the geometric rule above, then any sufficiently rational system for representing meaning will converge on the same ladder --- not because it copied this one, but because the simplex sequence is a geometric fact about how closure works. This is the project's self-test: \emph{ULP only counts as fundamental if it is independently derivable}.
+
+The practical corollary: if ULP satisfies this criterion, it would also serve as a candidate substrate for \textbf{communication with any sufficiently rational being} --- human, machine, or otherwise non-human --- without requiring shared cultural training. The convergence test is, eventually, also the functionality test.
+
+\subsection{A Proposed Semantic Rule: The Trigram}
+
+One working proposal for how units of meaning are structured: a \textbf{trigram} of form \texttt{X. k0 Z.}, where \texttt{X.} is the figure being individuated, \texttt{Z.} is the ground it is distinguished against, and \texttt{k0} is the mode of distinction --- the tier of cut doing the work.
+
+The right side contextualizes the left. This prevents the system from collapsing into pure relation --- a common failure mode where everything is defined in terms of everything else with no way to name the thing being talked about. The trigram is not axiomatic; it is the current candidate for how compositional semantics should work within the run-length substrate. Other rule forms remain on the table.
+
+\section{Current State}
+
+\begin{itemize}[leftmargin=*, itemsep=0.35em]
+    \item The \textbf{kernel} (four requirements above) is stable and load-bearing.
+    \item The \textbf{notation} (\texttt{n.}~and~\texttt{no} with postfix markers) is locked at v0.
+    \item The \textbf{13-tier ladder} is structurally committed; tiers 1--8 are strong, tiers 9--13 are provisional.
+    \item A \textbf{v0 ``Graph Core'' build path} has been identified --- sentences as triples, sidestepping full boxing / closure at v0 and treating complex meaning as a graph rather than a single nested string.
+    \item \textbf{Lean 4 formalization} has begun: eight proven theorems cover Layers 0--2, including one establishing that the binary substrate is structurally forced rather than conventionally chosen.
+    \item The \textbf{boxing / closure mechanism} is the largest open foundation-stone. A frame-delimiter proposal exists; uniqueness under arbitrary nesting is not yet proved.
+    \item \textbf{Continuous magnitude} ($\pi$, $e$, irrationals) is unsolved at v0 and deferred to v1+ via procedural constructions.
+    \item The \textbf{2D syntax question} remains open; a working prototype exists.
+\end{itemize}
+
+For the full tier-by-tier epistemic map, see \texttt{STATUS.md}.
+
+\section{Why This Matters}
+
+If such a substrate can be formalized, it creates the basis for two things at once.
+
+\paragraph{A universal language for the world.} One that would be easiest to learn (built from the simplest possible primitives rather than arbitrary vocabulary), most expressive and creative (combinatorial rather than enumerative), most efficient for human thought (no friction from cultural randomness), and able to carry any cultural complexity without flattening it. This argument inverts the usual universal-language story: natural-language hegemony flattens other languages because natural languages were not designed to integrate the complexity of any other. A system grounded in geometrically-necessary primitives can represent any cultural nuance at the highest level possible. It is not a replacement for cultural expression; it is the substrate that lets cultural expression survive integration.
+
+\paragraph{A universal parsing substrate for AI.} Semantic compositionality at the level of the representation itself, rather than statistical approximation over tokens. Current LLM communication has no guaranteed semantic grounding; a ULP-based system would be interpretable by any sufficiently rational agent without requiring training on a human corpus. The architectural implication is that inference, training, and memory become more efficient when the substrate itself carries typed geometric structure rather than requiring statistical approximation of meaning. Semantic storage could, in principle, live directly within transistor-level binary state, not as an encoded layer on top of stochastic token representations.
+
+Both framings are recent --- within the last one-to-four years of the project's arc. They are not the origin of the project, but they are why the project now matters outside the context of personal inquiry.
+
+\section{Historical Note}
+
+The project has been under continuous development since 2014. The earliest surviving dated written artifact is an October 2020 sketch of seven unnamed primitives, with \texttt{0} as ``origin, primordial.'' The formal ChatGPT record begins in January 2023. The binary run-length breakthrough --- the insight that the substrate could be reduced to two symbols with meaning derived entirely from run-length --- happened in January 2025 in Guatemala, recorded first in personal notes and formalized across multiple AI archives in the weeks and months that followed. The January 2026 sessions then carried through to the formal simplex-derivation argument and the current articulation.
+
+For the full twelve-year trajectory, including parental intellectual lineage (semiotic phenomenology and the structural categories of culture), the layered accretion from non-random sounds through mathematically-derived dimensions to the binary substrate, and the cross-AI development record spanning ChatGPT, Claude, Gemini, and NotebookLM, see \texttt{history/HISTORY.md} in the project repository.
+
+\section{Not a Closed Claim}
+
+This is proposed, not established. The whole system is held provisionally --- but years of iteration have led here, and the commitments above are working ones, tested against themselves repeatedly. This manifest is the current state of the search.
+
+\begin{itemize}[leftmargin=*, itemsep=0.3em]
+    \item \textbf{Not a completed theory.} Several foundation-stones --- boxing/closure, continuous magnitude, the ULP $\leftrightarrow$ IVNA bridge, the formal criterion for alien convergence --- are unresolved.
+    \item \textbf{Not a designed conlang at the substrate level.} The binary substrate and the dimensional ladder are meant to be \emph{discovered} --- geometrically necessary, not culturally chosen. Configuration layers built on top of the substrate --- any eventual verbal form for humans, for instance, which has to work with human biology --- are necessarily designed. The discovery is the substrate; the design sits on top.
+    \item \textbf{Not a proof of anything, yet.} The Lean 4 formalization has begun, but the core expressive-completeness, unique-parse, and normal-form claims are not yet proved.
+    \item \textbf{Not promotional material.} The state described here is the honest state, including what is fragile.
+\end{itemize}
+
+\section*{Further Material}
+
+\begin{itemize}[leftmargin=*, itemsep=0.2em]
+    \item \texttt{README.md} --- repository entry point and overview
+    \item \texttt{STATUS.md} --- honest current-state map, tier by tier
+    \item \texttt{history/HISTORY.md} --- twelve-year trajectory narrative
+    \item \texttt{archive-highlights.md} --- curated verbatim quotes from the development archive across ChatGPT, Claude, Gemini, and NotebookLM
+    \item \texttt{spec/design-criteria.md} --- fourteen canonical design properties
+    \item \texttt{history/competing-concepts.md} --- eight unresolved decision points with cross-archive provenance
+    \item \texttt{lean/} --- Lean 4 formalization in progress
+    \item \texttt{research/sources/} --- source catalog and primary material
+\end{itemize}
+
+\section*{Acknowledgments}
+
+ULP has been developed across two parallel layers for more than a decade: private notebooks and sustained conversations with AI collaborators across ChatGPT, Claude, Gemini, and NotebookLM. The Playful Sincerity Digital Core (PSDC) has served as a working partner throughout the 2025--2026 period, particularly in the consolidation of the present manifest. Any errors of judgment or overclaim are the author's.
+
+\end{document}
