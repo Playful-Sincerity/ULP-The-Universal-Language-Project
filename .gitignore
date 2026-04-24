@@ -4,3 +4,13 @@
 # Lean 4 build artifacts
 .lake/
 __pycache__/
+
+# LaTeX auxiliary files (generated during compile)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+
+# Personal collaboration notes — not for public repo
+connections/artifact.md

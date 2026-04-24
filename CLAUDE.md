@@ -140,23 +140,16 @@ Formally relating the two would be deeply significant work. See `~/Playful Since
 ## File Structure
 
 ```
-~/Playful Sincerity/PS Research/ULP/
-  CLAUDE.md              # This file
-  (content TBD)
-
-~/Wisdom Personal/ChatGPT Archive/summaries/
-  ulp-language.md        # Primary reference — full synthesis of 33 conversations
-
-~/Playful Sincerity/PS Research/Gravitationalism/      # GDGM framework — cosmological context for the tier ladder
+PS Research/ULP/                    # this repo
+PS Research/Gravitationalism/       # GDGM framework — cosmological context for the tier ladder
+PS Research/IVNA/                   # parallel math system
 ```
 
-The ChatGPT archive is the main development record.
-The 33 ULP conversations (~300K+ words) contain the full intellectual history, including the most rigorous January 2026 sessions.
-The most important single session is "Self Guided: Branch · Branch · 6 primes system" (2026-01-22, ~85K words).
+The full synthesis of the 33 ULP conversations (~300K+ words, 2023–2026) is preserved in the author's personal ChatGPT archive. The distilled narrative is published in [`history/HISTORY.md`](history/HISTORY.md). The most important single session is "Self Guided: Branch · Branch · 6 primes system" (2026-01-22, ~85K words).
 
 ## Cross-References
 
-- Primary archive summary: `~/Wisdom Personal/ChatGPT Archive/summaries/ulp-language.md`
-- Gravitationalist philosophy: `~/Playful Sincerity/PS Research/Gravitationalism/`
-- Memory file: `~/.claude/projects/-Users-wisdomhappy/memory/project_ulp.md`
-- Related math system: IVNA (documented in ChatGPT archive)
+- Public trajectory narrative: [`history/HISTORY.md`](history/HISTORY.md)
+- Archive inventory across ChatGPT, Claude, Gemini, NotebookLM: [`research/sources/archive-inventory.md`](research/sources/archive-inventory.md)
+- Gravitationalist philosophy: `PS Research/Gravitationalism/`
+- Related math system: `PS Research/IVNA/`

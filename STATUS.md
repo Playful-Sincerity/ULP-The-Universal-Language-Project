@@ -126,7 +126,7 @@ This is the recommended path because it makes ULP **executable** — tokenize by
 
 | Target | Claim | Status |
 |--------|-------|--------|
-| P1 | Unique parse: every valid binary string has exactly one parse tree | In progress (Layers 0–2 theorems landed) |
+| P1 | Unique parse: every valid binary string has exactly one parse tree | Foundations in place (Layers 0–2 theorems landed; `Expression.alternating` enforces run-length uniqueness structurally). The P1 theorem itself is not yet stated. |
 | P2 | Expressive completeness: every concept in the target ontology is encodable | Not started |
 | P3 | Normal form: every expression has a canonical form | Not started |
 
@@ -145,7 +145,7 @@ Current Lean 4 progress: `lean/ULP/Basic.lean` contains 8 proved theorems coveri
 | 5 | ULP ↔ IVNA formal bridge | Gestured at; indexed zeros/infinities may map to dimensional types | Not blocking |
 | 6 | 2D visual syntax | Linear strings may never fully capture containment, overlay, simultaneous co-reference | Future work; 2D Writer prototype exists |
 | 7 | Alien convergence as formal criterion | Guiding intuition; needs specific provable form | Research program |
-| 8 | Proof assistant implementation | P1 in-progress; P2/P3 not started | Partially blocking full validation |
+| 8 | Proof assistant implementation | Foundation theorems (Layers 0–2) proved in Lean 4; P1 foundations in place but theorem not yet stated; P2/P3 not started | Partially blocking full validation |
 
 For the full treatment of each, see `history/competing-concepts.md` (8 unresolved decision points with taxonomy) and `plan.md` (full 10-phase research plan with Red Team amendment section).
 
