@@ -8,7 +8,7 @@ The README, STATUS, and HISTORY documents build their claims on top of the mater
 
 ## From Wisdom's Speech (2026-04-23)
 
-Dictated the day this repo was restructured. Full preservation at `knowledge/sources/wisdom-speech/2026-04-23-ulp-origins.md`.
+Dictated on the day this repo was restructured for public presentation.
 
 On the 2014 origin:
 

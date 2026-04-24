@@ -143,7 +143,7 @@ Current Lean 4 progress: `lean/ULP/Basic.lean` contains 8 proved theorems coveri
 | 3 | Continuous magnitude (π, e, irrationals) | Procedural/limit constructions deferred to v1+; v0 supports only finite discrete magnitudes | Not blocking v0 |
 | 4 | Negation stability | `9o` domain-relative categorical exclusion | Usable at v0 |
 | 5 | ULP ↔ IVNA formal bridge | Gestured at; indexed zeros/infinities may map to dimensional types | Not blocking |
-| 6 | 2D visual syntax | Linear strings may never fully capture containment, overlay, simultaneous co-reference | Future work; 2D Writer prototype exists |
+| 6 | 2D visual syntax | Linear strings may never fully capture containment, overlay, simultaneous co-reference | Future work; prototype exists locally |
 | 7 | Alien convergence as formal criterion | Guiding intuition; needs specific provable form | Research program |
 | 8 | Proof assistant implementation | Foundation theorems (Layers 0–2) proved in Lean 4; P1 foundations in place but theorem not yet stated; P2/P3 not started | Partially blocking full validation |
 
@@ -177,4 +177,4 @@ The state described here is derived from:
 - `lean/ULP/Basic.lean` (Lean 4 formal layer)
 - January 2026 whitepaper synthesis document (Google Drive, `1jfdR-fbOGrJVQ1jU8loXotCKQq-l4PHJRrVrmn8Nz3s`)
 
-For what is *not* yet captured anywhere and still lives in Wisdom's working memory and notes, see `knowledge/sources/wisdom-speech/` and `research/sources/notes-extract.md`.
+For additional context not captured here, see `research/sources/notes-extract.md`.

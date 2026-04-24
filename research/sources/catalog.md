@@ -11,14 +11,6 @@ These live inside the repo and are the first place to look.
 | [archive-inventory.md](archive-inventory.md) | Comprehensive survey of ChatGPT + Claude + Gemini + NotebookLM archives for ULP content. Beyond-the-summary findings, cross-AI comparison, recommendations for what to quote vs link vs preserve. | 2026-04-23 |
 | [notes-extract.md](notes-extract.md) | Extraction from Wisdom's `语言` Apple Notes folder — the pre-digital and parallel-notebook working log from October 2020 through January 2026. Includes dated log entries, notation-experiment names, standout phrases. | 2026-04-23 |
 
-## Primary Source: Wisdom's Speech
-
-Dictated brain-dumps preserved verbatim. Full rule: [`~/.claude/rules/preserve-human-speech.md`](~/.claude/rules/preserve-human-speech.md).
-
-| File | Topic | Date |
-|------|-------|------|
-| [`../../knowledge/sources/wisdom-speech/2026-04-23-ulp-origins.md`](../../knowledge/sources/wisdom-speech/2026-04-23-ulp-origins.md) | ULP origins (2014), parental lineage (semiotic phenomenology + 12-system of society), AI-substrate thesis, linguistic-diversity preservation argument | 2026-04-23 |
-
 ## Primary Source: `语言` Apple Notes (2020–2026)
 
 Wisdom's personal working notebook. 18 notes total in the `语言` folder. 9 text notes (the principal `语言` log plus others) and 9 image-only notes containing handwritten notation experiments from 2021.
@@ -107,7 +99,7 @@ Decisions
    ↓
 Syntheses (README, STATUS, HISTORY, archive-highlights)
    ↓
-Extractions (archive-inventory.md, notes-extract.md, wisdom-speech/)
+Extractions (archive-inventory.md, notes-extract.md)
    ↓
 Raw sources (AI archives, Drive, Apple Notes, paper notes, memory)
 ```

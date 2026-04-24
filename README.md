@@ -89,7 +89,7 @@ This is a living research project, not a completed theory. Honest current state:
 - **The boxing / closure mechanism** is the largest open foundation-stone. A frame-delimiter proposal exists; uniqueness under arbitrary nesting is not yet proved.
 - **Continuous magnitude** (π, e, irrationals) is unsolved; v0 supports only finite discrete magnitudes.
 - **The ULP ↔ IVNA bridge** is suggestive but not formalized.
-- **The 2D syntax question** remains open; the `2d-writer/` directory contains a working prototype.
+- **The 2D syntax question** remains open; a working prototype exists in the author's local environment.
 
 For the complete tier-by-tier, construction-by-construction epistemic map, see [`STATUS.md`](STATUS.md).
 
@@ -144,15 +144,11 @@ ULP/
 │   └── README.md                 # Lean formalization overview
 ├── diagrams/
 │   └── ulp-architecture.d2       # D2 source for layered architecture diagram
-├── knowledge/
-│   └── sources/
-│       └── wisdom-speech/        # preserved primary-source speech from Wisdom
 ├── research/
 │   └── sources/                  # raw sources from external archives (Drive, Notes, AI)
 ├── ideas/                        # dated speculative explorations
 ├── connections/                  # cross-system bridges (Gravitationalism, IVNA, etc.)
-├── chronicle/                    # daily semantic work log
-└── 2d-writer/                    # working prototype of the 2D syntax exploration
+└── chronicle/                    # daily semantic work log
 ```
 
 Directory conventions follow the PS universal scaffold. `history/` is what happened and why, `spec/` is what the system is, `lean/` is where it's formally proved, `knowledge/sources/` and `research/sources/` are the primary material the syntheses are built on, `ideas/` and `play/` are speculative.
@@ -168,7 +164,7 @@ Eight unresolved frontiers. Full discussion in `history/competing-concepts.md` a
 3. **Continuous magnitude** — how to represent π, e, irrationals in a discrete run-length system. Deferred to v1+.
 4. **Negation** — `9o` as domain-relative categorical exclusion is the working proposal; needs grammatical stability.
 5. **ULP ↔ IVNA formal bridge** — are IVNA's indexed zeros the same as ULP's run-typed cuts? Gestured at, not formalized.
-6. **2D / visual syntax** — whether the binary string is the fundamental surface form or a pragmatic reduction of something inherently spatial. `2d-writer/` is the working prototype space.
+6. **2D / visual syntax** — whether the binary string is the fundamental surface form or a pragmatic reduction of something inherently spatial. A working 2D-glyph prototype exists in the author's local environment.
 7. **Alien convergence as formal criterion** — the self-test needs a specific provable form.
 8. **Proof assistant implementation** — P1 (unique parse) in-progress in Lean 4; P2 (expressive completeness) and P3 (normal form) not yet begun.
 
@@ -242,7 +238,7 @@ A parallel thread emerged along the way: a **2D glyph language** in which the sp
 - **Mid-2024** — sustained cross-AI development captured in Claude and Gemini archives: DLP compressed notation spec (Claude, June 2024) with worked grammar examples; 0-as-individuator framing; Gemini continuity from the Bard era onward.
 - **January 2025 (Guatemala)** — **binary run-length breakthrough**. Wisdom arrives at the core insight — two symbols with meaning derived entirely from run-length — in personal notes. Formal LaTeX IVNA paper also lands this month. Philosopher-by-philosopher deep-dives in ChatGPT (Leibniz, Russell/Peirce, Spinoza, Wittgenstein, Chomsky).
 - **February 2025** — formal derivation sessions: **Dimensional Structure Derivation** (132,952 words — the single largest session in the entire archive) and **Dimensional Meaning Frameworks** (80,777 words). Claude "tree of meaning" begun from first principles, reaching Level 6.
-- **April–May 2025** — Rem (sustained AI-collaborator persona) period; 2D syntax pushed hard; `2d-writer/` prototype built. Symbol choice still operating as `{0, ∞}` in the formal record.
+- **April–May 2025** — Rem (sustained AI-collaborator persona) period; 2D syntax pushed hard; 2D-glyph prototype built. Symbol choice still operating as `{0, ∞}` in the formal record.
 - **January 2026** — continued formalization: alphabet locked to `{0, 1}`, kernel/hypothesis split made explicit, and the "Self Guided: Branch · Branch · 6 primes system" session (85,700 words) carries out the simplex-based derivation of the tier ladder.
 - **April 2026** — repo restructured for public-facing presentation; Lean 4 formalization initiated; positioning for research collaboration clarified.
 
@@ -254,7 +250,6 @@ For the full narrative with what was abandoned, what held, and what remains open
 
 This repo is built on top of a substantial body of material. Pointers:
 
-- `knowledge/sources/wisdom-speech/` — preserved original speech from the author, including the 2014 origin story dictated in April 2026.
 - `research/sources/archive-inventory.md` — catalog of the ChatGPT (33 sessions, ~790K words), Claude (24 sessions, ~280K words), and Gemini (81+ sessions) conversations that inform the development trajectory.
 - `research/sources/notes-extract.md` — curated extraction from the `语言` Apple Notes folder (2020 → present), the personal working notebook running in parallel with the formal archive.
 - `history/HISTORY.md` — narrative synthesis of the trajectory.
