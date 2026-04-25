@@ -192,7 +192,7 @@ For audiences at **Anthropic** or in AI alignment / interpretability research: t
 
 For audiences at **Berkeley Alembic** or in contemplative / consciousness-culture circles: the project touches the recurring observation across traditions that fundamental reality has a small set of irreducible principles — and proposes a specific, geometrically-derived formalization of that observation. It is welcome territory for philosophical interrogation, and the Arrival-like 2D glyph exploration invites aesthetic-structural collaboration as well.
 
-Reach the author at: [contact method TBD — to be filled before public posting]
+Reach the author at: [wisdomhappy@playfulsincerity.org](mailto:wisdomhappy@playfulsincerity.org)
 
 ---
 
